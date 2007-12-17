@@ -11,7 +11,6 @@ Source:		http://kent.dl.sourceforge.net/sourceforge/amyedit/%{name}-%{version}.t
 URL:		http://amyedit.sourceforge.net/
 License:	GPL
 Group:		Publishing
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	gtkmm2.4-devel
 BuildRequires:	aspell-devel
