@@ -40,10 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="editors_section.png" needs="x11" title="AmyEdit" longtitle="Lightweight LaTeX editor" section="Office/Publishing" xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -74,6 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/%name
 %{_datadir}/%name
 %{_datadir}/applications/*
-%{_menudir}/%name
 %{_datadir}/applications/mandriva-%{name}.desktop
 
