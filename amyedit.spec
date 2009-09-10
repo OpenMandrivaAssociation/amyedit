@@ -1,6 +1,6 @@
 %define name	amyedit
 %define version	1.0
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name: 	 	%{name}
 Summary: 	A lightweight editor for LaTeX files
