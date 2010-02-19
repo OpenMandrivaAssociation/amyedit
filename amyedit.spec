@@ -7,6 +7,8 @@ Summary:	A lightweight editor for LaTeX files
 Version:	%{version}
 Release:	%{release}
 Source:		http://kent.dl.sourceforge.net/sourceforge/amyedit/%{name}-%{version}.tar.bz2
+Patch0:		amyedit-1.0-keyfile.patch
+Patch1:		amyedit-1.0-signal.patch
 URL:		http://amyedit.sourceforge.net/
 License:	GPLv2
 Group:		Publishing
@@ -14,7 +16,8 @@ BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	gtkmm2.4-devel
 BuildRequires:	aspell-devel
-BuildRequires:	gtksourceview-devel
+BuildRequires:	intltool
+BuildRequires:	gtksourceview1-devel
 
 %description
 AmyEdit is a LaTeX editor written to allow users to easily create LaTeX
@@ -27,16 +30,17 @@ startup time has elapsed.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
-aclocal
-autoreconf
+autoreconf -fi
 %configure2_5x
 %make
 										
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 
 #menu
 
