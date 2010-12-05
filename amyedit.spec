@@ -9,6 +9,7 @@ Release:	%{release}
 Source:		http://kent.dl.sourceforge.net/sourceforge/amyedit/%{name}-%{version}.tar.bz2
 Patch0:		amyedit-1.0-keyfile.patch
 Patch1:		amyedit-1.0-signal.patch
+Patch2:		amyedit-1.0-fix-build.patch
 URL:		http://amyedit.sourceforge.net/
 License:	GPLv2
 Group:		Publishing
@@ -32,6 +33,7 @@ startup time has elapsed.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p0
 
 %build
 autoreconf -fi
@@ -53,7 +55,7 @@ Exec=%{_bindir}/%{name}
 Icon=editors_section
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;X-MandrivaLinux-Office-Publishing;Graphics;Office;Viewer;
+Categories=GNOME;GTK;Graphics;Office;Viewer;
 EOF
 
 %find_lang %name
