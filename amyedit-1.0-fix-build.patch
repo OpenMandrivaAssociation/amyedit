@@ -1,0 +1,11 @@
+--- src/Preferences.cc.build	2010-12-05 16:18:56.000000000 +0100
++++ src/Preferences.cc	2010-12-05 16:19:12.000000000 +0100
+@@ -211,7 +211,7 @@
+ }
+ 
+ void Preferences::edit_latex_commands(){
+-	EditLatexCommands::EditLatexCommands dialog(this);
++	EditLatexCommands dialog(this);
+ 	dialog.run();
+ 	Amy::populate_text_list_model_from_list(previewoptionslist->get_model(), PrefStruct::instance()->get_keys("Commands"), true);
+ 	previewoptionslist->select(PrefStruct::instance()->get<Glib::ustring>("General", "preview_combo"));
