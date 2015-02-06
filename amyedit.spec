@@ -1,7 +1,7 @@
 Name:		amyedit
 Summary:	A lightweight editor for LaTeX files
 Version:	1.0
-Release:	9
+Release:	10
 Source:		http://kent.dl.sourceforge.net/sourceforge/amyedit/%{name}-%{version}.tar.bz2
 Patch0:		amyedit-1.0-keyfile.patch
 Patch1:		amyedit-1.0-signal.patch
