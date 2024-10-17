@@ -6,7 +6,7 @@ Source:		http://kent.dl.sourceforge.net/sourceforge/amyedit/%{name}-%{version}.t
 Patch0:		amyedit-1.0-keyfile.patch
 Patch1:		amyedit-1.0-signal.patch
 Patch2:		amyedit-1.0-fix-build.patch
-URL:		http://amyedit.sourceforge.net/
+URL:		https://amyedit.sourceforge.net/
 License:	GPLv2
 Group:		Publishing
 BuildRequires:	perl(XML::Parser)
