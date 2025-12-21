@@ -9,6 +9,11 @@ Patch2:		amyedit-1.0-fix-build.patch
 URL:		https://amyedit.sourceforge.net/
 License:	GPLv2
 Group:		Publishing
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	gtkmm2.4-devel
 BuildRequires:	aspell-devel
